@@ -6,34 +6,30 @@ let ayadirBtn = document.getElementById("btn");
 ayadirBtn.addEventListener("click",ayadir());
 
 
-function ayadir(x,y){
- y = []; 
- 
- /*crendo elementos */
- for(let i = 0; i <= 2; i++){
+function ayadir(x){ 
+let caja = [];
+
+/*crendo elementos */
+ for(let i = 0; i <= 1; i++){
   x = prompt("elementos");
-        y.push(x);      
-}
+     caja.push(x);   
+};
 /*metiebdo informcion */
- return credorDeTexto(y);
+ return credorDeTexto(caja);
 };
 
 
 function credorDeTexto(j = []){
 let contenedor = document.createElement("div");
-let elementoP = document.createElement("p");
+let ojo = [];
 
+/*donde grega el texto */
+for (const elemento of j) {
+let cambio = String(elemento);
+ojo.push(cambio);
+}
 
-/*bucle para recorrer*/
-for(let numero of j){
-let nodoT = document.createTextNode(numero);
-
-/*crear texto*/
-elementoP.appendChild(nodoT);
-contenedor.appendChild(elementoP);
-} 
- return document.write(contenedor);
-
+return document.write(ojo.join("."));
 }
 
 
