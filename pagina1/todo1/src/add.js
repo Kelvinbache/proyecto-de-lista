@@ -3,7 +3,8 @@
 /* boton para alladir elemetos */
 
 let ayadirBtn = document.getElementById("btn");
-ayadirBtn.addEventListener("click",ayadir());
+ayadirBtn.addEventListener("click",ayadir);
+
 
 
 function ayadir(x){ 
@@ -19,17 +20,27 @@ let caja = [];
 };
 
 
-function credorDeTexto(j = []){
-let contenedor = document.createElement("div");
-let ojo = [];
+function credorDeTexto(j = [],b){
+let contenedor = document.getElementById("contenedor");
+let etiqueta = document.createElement("p");
 
 /*donde grega el texto */
-for (const elemento of j) {
-let cambio = String(elemento);
-ojo.push(cambio);
+for (let i = 0; i < j.length; i ++) {
+   b = etiqueta.textContent = j + [i]; 
 }
 
-return document.write(ojo.join("."));
+  return contenedor.append(b);
 }
+/*forma de solucion de este problema */
+
+// function ayadir(a,b){
+// let etiqueta = document.createElement("li");
+
+//   for (let i = 0; i <= 1; i++) {
+//        a = prompt("hola"); 
+//     b = etiqueta.textContent = a;
+//   }
+//   return document.body.append(b);
+// }
 
 
