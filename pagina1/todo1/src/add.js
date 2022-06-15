@@ -11,7 +11,7 @@ function ayadir(x){
 let caja = [];
 
 /*crendo elementos */
- for(let i = 0; i <= 1; i++){
+ for(let i = 0; i < 1; i++){
   x = prompt("elementos");
      caja.push(x);   
 };
@@ -22,14 +22,18 @@ let caja = [];
 
 function credorDeTexto(j = [],b){
 let contenedor = document.getElementById("contenedor");
-let etiqueta = document.createElement("p");
+let etiqueta = document.createElement("li");
+let etiqueta1 = document.createElement("ul");
+
+/*pegar nodos*/
+etiqueta1.appendChild(etiqueta);
 
 /*donde grega el texto */
-for (let i = 0; i < j.length; i ++) {
+for (let i = 0; i < j.length; i ++){
    b = etiqueta.textContent = j + [i]; 
 }
 
-  return contenedor.append(b);
+  return contenedor.append(etiqueta1);
 }
 /*forma de solucion de este problema */
 
