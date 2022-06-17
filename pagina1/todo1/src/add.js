@@ -10,7 +10,7 @@ ayadirBtn.addEventListener("click",ayadir);
 function ayadir(x){ 
 let caja = [];
 
-/*crendo elementos */
+/*crendo elementos*/
  for(let i = 0; i < 1; i++){
   x = prompt("elementos");
      caja.push(x);   
@@ -20,31 +20,43 @@ let caja = [];
 };
 
 
-function credorDeTexto(j = [],b){
+function credorDeTexto(j = []){ 
 let contenedor = document.getElementById("contenedor");
+/*credor de los elementos */
 let etiqueta = document.createElement("li");
 let etiqueta1 = document.createElement("ul");
 
 /*pegar nodos*/
 etiqueta1.appendChild(etiqueta);
 
-/*donde grega el texto */
+/*donde se agrega el texto */
 for (let i = 0; i < j.length; i ++){
-   b = etiqueta.textContent = j + [i]; 
+    etiqueta.textContent =  j; 
 }
-
+/*se retorna en el contendor*/
   return contenedor.append(etiqueta1);
 }
-/*forma de solucion de este problema */
 
-// function ayadir(a,b){
-// let etiqueta = document.createElement("li");
+/*boton para eliminar el ultimo elemento */
+const btn2 = document.getElementById("btn2");
+btn2.addEventListener("click" ,eliminar);
 
-//   for (let i = 0; i <= 1; i++) {
-//        a = prompt("hola"); 
-//     b = etiqueta.textContent = a;
-//   }
-//   return document.body.append(b);
-// }
+function eliminar(params) {
+ let contendor = document.getElementById("contenedor");
+ let recorrido = contendor.childNodes;
+
+ for (let i = 0; i < recorrido.length; i++) {
+     let elementos = recorrido[i].lastChild;
+    return elementos.remove(); 
+ }  
+}
+
+
+
+
+
+
+
+
 
 
