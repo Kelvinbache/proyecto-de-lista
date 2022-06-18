@@ -1,0 +1,76 @@
+body{
+ background: #f9f9fd;
+}
+
+/*El titulo*/
+
+.titulo{
+    background: rgba(4, 245, 4, 0.733);
+    height: 20px;
+    padding: 10px 0px ;
+    text-align: center;
+}
+
+
+/*todo el contenedor*/
+.todo{
+    background: rgb(104, 104, 103);
+}
+
+/*las lista*/
+.lista{
+    height: 24px;
+    width: 100vh;
+    background: #306ff3;
+    text-align: center;
+    padding: 6px;
+    box-shadow: 4px 3px 3px 2px rgba(0,0,0,0.4);
+}
+
+.contenedor{
+    margin: 15px 0px;
+    display: flex;  
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+
+
+/*contenedor de botones*/
+
+.botones{
+    margin: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tulista{
+    margin-right: 40px;
+    background: rgb(189, 184, 184);
+    text-align: center; 
+    height: 60px;
+    width: 40vh;
+}
+
+
+/*botones*/
+.btn{
+    margin-right: 15px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 4px 3px 3px 2px rgba(0,0,0,0.3);
+}
+
+.btn2{
+    margin-left: 15px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 4px 3px 3px 2px rgba(0,0,0,0.3);
+}
+
+
+.pie{
+    background: #000000;
+    height: 10vh;
+}
